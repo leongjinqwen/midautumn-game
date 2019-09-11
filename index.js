@@ -40,9 +40,9 @@ function randomY (){
 }
 
 function randomSpeed (){
-    const speed = Math.floor(Math.random()*4);
+    const speed = Math.floor(Math.random()*6);
     if (speed<2){
-        return 1500
+        return 2500
     }
     return Number(speed+'000')
 }
