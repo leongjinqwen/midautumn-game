@@ -45,7 +45,7 @@ body {
   }
 }
 #countdown{
-  font-size: 160px;
+  font-size: 150px;
   opacity: 0.3;
   text-align: center;
   color: white;
@@ -109,6 +109,6 @@ a {
 }
 #intro{
   color:white;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 18px;
+  margin-top: 15px;
 }
