@@ -2,26 +2,23 @@ let startY = $("#rabbit").css('top')
 let startX = $("#rabbit").offset().left
 let formLink = false;
 
-
-
-
 $('#start').click(function(){
     $("body").keydown(function(e) {
         if(e.keyCode == 32) { // jump
             let position = $("#rabbit").css('top')
             let num = position.substring(0,position.length-2)
-            let result = Number(num) - 240
+            let result = Number(num) - 300
             if (position == startY) {
-                $("#rabbit").animate({top: `${result}px`},350).animate({top: '60%'},350);
+                $("#rabbit").animate({top: `${result}px`},300).animate({top: '60%'},300);
             }
         }
     });
     $("body").on('touchstart',function(e) {
         let position = $("#rabbit").css('top')
         let num = position.substring(0,position.length-2)
-        let result = Number(num) - 240
+        let result = Number(num) - 300
         if (position == startY) {
-            $("#rabbit").animate({top: `${result}px`},350).animate({top: '60%'},350);
+            $("#rabbit").animate({top: `${result}px`},300).animate({top: '60%'},300);
         }
     });
     document.getElementById('bgMusic').play();
