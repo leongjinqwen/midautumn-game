@@ -26,6 +26,7 @@ body {
 .moon{
     background: rgb(253, 229, 124);
     background: #ffd02c;
+    /* background: radial-gradient(ellipse at center,rgb(214, 141, 5) 70%,rgb(245, 115, 8) 80%, rgb(255, 81, 0) 100%); */
     width: 100%;
     padding-top: 100%;
     border-radius: 50%;
@@ -135,6 +136,9 @@ span {
     font-size: 10px;
     margin:0 0 ;
   }
+  #fbshare{
+    bottom:10%;
+  }
 }
 @media only screen 
 and (min-device-width : 768px) 
@@ -143,4 +147,10 @@ and (orientation : portrait) { /* STYLES GO HERE */
   #rabbit {
     top:68%;
   } 
+}
+#fbshare{
+  position: absolute;
+  bottom:13%;
+  left:50%;
+  transform: translate(-50%);
 }
