@@ -1,33 +1,29 @@
 let startY = $("#rabbit").css('top')
 let startX = $("#rabbit").offset().left
-let audio = document.getElementById('bgMusic');
 let formLink = false;
 
-function playBg(){
-    audio.play()
-}
 
-$("body").keydown(function(e) {
-    if(e.keyCode == 32) { // jump
+
+
+$('#start').click(function(){
+    $("body").keydown(function(e) {
+        if(e.keyCode == 32) { // jump
+            let position = $("#rabbit").css('top')
+            let num = position.substring(0,position.length-2)
+            let result = Number(num) - 240
+            if (position == startY) {
+                $("#rabbit").animate({top: `${result}px`},350).animate({top: '60%'},350);
+            }
+        }
+    });
+    $("body").on('touchstart',function(e) {
         let position = $("#rabbit").css('top')
         let num = position.substring(0,position.length-2)
         let result = Number(num) - 240
         if (position == startY) {
             $("#rabbit").animate({top: `${result}px`},350).animate({top: '60%'},350);
         }
-    }
-});
-$("body").on('touchstart',function(e) {
-    let position = $("#rabbit").css('top')
-    let num = position.substring(0,position.length-2)
-    let result = Number(num) - 240
-    if (position == startY) {
-        $("#rabbit").animate({top: `${result}px`},350).animate({top: '60%'},350);
-    }
-});
-
-$('#start').click(function(){
-    playBg();
+    });
     start()
 });
 
