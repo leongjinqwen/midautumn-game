@@ -86,11 +86,11 @@ function show(i){
         $(`#${i}`).animate({left:'-30vw'},{
             duration:randomSpeed(),
             step: function() {
-                if ( $(this).css('left') >= (`${startX+40}px`) && $(this).css('left') <= (`${startX+110}px`)) {
+                if ( $(this).css('left') >= (`${startX}px`) && $(this).css('left') <= (`${startX+100}px`)) {
                     let y = $(this).offset().top
                     let rabStart = $('#rabbit').offset().top
-                    let rabEnd = rabStart+120
-                    if ( (rabStart+15) <= y && y <= rabEnd ){
+                    let rabEnd = rabStart+116
+                    if ( (rabStart) <= y && y <= rabEnd ){
                         $(this).remove()
                         scoreAdd($(this).attr('id'))
                     }
