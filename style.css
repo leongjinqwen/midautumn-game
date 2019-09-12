@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Raleway', sans-serif;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  position: relative;
+  position:relative;
 }
 .contain {
   width: 100%;
@@ -24,6 +24,7 @@ body {
 }
 
 .moon{
+    background: rgb(253, 229, 124);
     background: #ffd02c;
     width: 100%;
     padding-top: 100%;
@@ -53,9 +54,9 @@ body {
   display: inline-block;
   width:100px;
   line-height: 40px;
-  border:1px solid rgb(255, 255, 255);
+  color:white;
   border-radius: 20px;
-  background-image: linear-gradient(135deg,rgba(250, 0, 96, 1),rgb(235, 118, 163));
+  background-image: linear-gradient(135deg,#f05e13,#e8a318);
   transition: transform 1s;
   margin-top: 15px;
 }
@@ -63,7 +64,6 @@ div.button:hover {
   box-shadow: 3px 1px 2px 3px rgba(0,0,0,0.2);
   transform: scale(1.3);
   cursor: pointer;
-  color: rgb(233, 232, 233);
 }
 
 span {
