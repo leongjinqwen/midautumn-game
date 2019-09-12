@@ -7,7 +7,8 @@
     <title>Mid-Autumn Festival Contest | Next Academy</title>
     <meta content="A mini game build with HTML, CSS and Javascript. Play and get a chance to win our Next Academy T-shirt!" name="description">
     <meta content="Mid-Autumn Festival Contest | Next Academy" property="og:title">
-    <meta content="https://uploads-ssl.webflow.com/5c7e6e3d10414d96d14fad7e/5ce3c47974fe12574d1518d4_next-cover-photo.jpg" property="og:image">
+    <meta content="https://nextagram-backend.s3-ap-southeast-1.amazonaws.com/rabbitgame.png" property="og:image">
+    <meta property="og:url" content="https://mid-autumn-festival-game.netlify.com/" />
     <link rel="icon" href="next-academy-black-notext.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -18,6 +19,16 @@
     
 </head>
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="contain">
         <div id="board" class="text-center mt-3">
             <strong id="text" ><span>Score: </span><span id="score">0</span></strong>
@@ -31,6 +42,13 @@
         <div class="container"></div>
         <img id="rabbit" class="" src="rabbit.gif">
         <div class="moon"></div>
+        <!-- Your share button code -->
+        <div id="fbshare">
+            <div class="fb-share-button" 
+                data-href="https://mid-autumn-festival-game.netlify.com/" 
+                data-layout="button_count">
+            </div>
+        </div>
     </div>
 
 
@@ -46,6 +64,7 @@
     <audio loop id="bgMusic" preload="auto">
         <source src="Goat.mp3" type="audio/mpeg">
     </audio>
+
     <button id="showModal" type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#gameModal"></button>
     <!-- Modal -->
     <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
