@@ -9,7 +9,7 @@ $('#start').click(function(){
             let num = position.substring(0,position.length-2)
             let result = Number(num) - 300
             if (position == startY) {
-                $("#rabbit").animate({top: `${result}px`},300).animate({top: '60%'},300);
+                $("#rabbit").animate({top: `${result}px`},300).animate({top: position},300);
             }
         }
     });
@@ -18,7 +18,7 @@ $('#start').click(function(){
         let num = position.substring(0,position.length-2)
         let result = Number(num) - 300
         if (position == startY) {
-            $("#rabbit").animate({top: `${result}px`},300).animate({top: '60%'},300);
+            $("#rabbit").animate({top: `${result}px`},300).animate({top: position},300);
         }
     });
     document.getElementById('bgMusic').play();
@@ -58,7 +58,9 @@ function start() {
             clearInterval(countdown);
             $("#board").append(`<div id="restart" class="button" onClick="restart()">Play again</div>`)
             if ($("#score").text() >= 20 ){
-                $('#showModal').click()
+                setTimeout(function() {
+                    $('#showModal').click()
+                },700);
             }
         }
     }, 1000);
