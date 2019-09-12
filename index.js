@@ -24,6 +24,7 @@ $('#start').click(function(){
             $("#rabbit").animate({top: `${result}px`},350).animate({top: '60%'},350);
         }
     });
+    document.getElementById('bgMusic').play();
     start()
 });
 
