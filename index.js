@@ -7,7 +7,8 @@ $('#start').click(function(){
         if(e.keyCode == 32) { // jump
             let position = $("#rabbit").css('top')
             let num = position.substring(0,position.length-2)
-            let result = Number(num) - 300
+            let jumpDistance = num* 3/4
+            let result = Number(num) - jumpDistance
             if (position == startY) {
                 $("#rabbit").animate({top: `${result}px`},300).animate({top: position},300);
             }
@@ -16,7 +17,8 @@ $('#start').click(function(){
     $("body").on('touchstart',function(e) {
         let position = $("#rabbit").css('top')
         let num = position.substring(0,position.length-2)
-        let result = Number(num) - 300
+        let jumpDistance = num* 3/4
+        let result = Number(num) - jumpDistance
         if (position == startY) {
             $("#rabbit").animate({top: `${result}px`},300).animate({top: position},300);
         }
@@ -83,7 +85,7 @@ function show(i){
     if (i>2){
         $(".container").append(`<img id="${i}" class="mooncake" src="colorcake.png">`)
         $(`#${i}`).css({'top':randomY()})
-        $(`#${i}`).animate({left:'-30vw'},{
+        $(`#${i}`).animate({left:'-15%'},{
             duration:randomSpeed(),
             step: function() {
                 if ( $(this).css('left') >= (`${startX}px`) && $(this).css('left') <= (`${startX+100}px`)) {
