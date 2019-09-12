@@ -4,6 +4,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 .contain {
   width: 100%;
@@ -11,7 +12,7 @@ body {
   overflow: hidden;
   position: relative;
   background-image: url(./dust-10s-200x200px.svg);
-  background-color: #100a5f;
+  background-color: #022555;
 }
 #rabbit {
   width:100px;
@@ -23,13 +24,12 @@ body {
 }
 
 .moon{
-    background: rgb(253, 229, 124);
-    background: radial-gradient(ellipse at center,rgb(214, 141, 5) 0%,rgb(245, 115, 8) 70%, rgb(255, 81, 0) 100%);
+    background: #ffd02c;
     width: 100%;
     padding-top: 100%;
     border-radius: 50%;
     margin: 0;
-    position: fixed;
+    position: absolute;
     top: 75%;
     box-shadow: 5px 0 10px 3px rgba(229,229,229,0.3),
                 0 0 10px 2px rgba(229,229,229,0.3),
