@@ -110,3 +110,7 @@ function scoreAdd(id){
         $("#score").text(score);
     } 
 }
+setTimeout(function() {
+    $("#start").show();
+},2000);
+$("#start").hide();
