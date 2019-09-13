@@ -1,14 +1,14 @@
 {
   "short_name": "Mooncakes Catching",
-  "name": "Mooncakes Catching",
+  "name": "Mooncakes Catching Game | Next Academy",
   "icons": [
     {
-      "src": "next-academy-black-notext.png",
+      "src": "mooncake.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "next-academy-black-notext.png",
+      "src": "mooncake.png",
       "type": "image/png",
       "sizes": "512x512"
     }
