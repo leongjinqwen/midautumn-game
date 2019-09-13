@@ -1,0 +1,19 @@
+{
+  "short_name": "Mooncakes Catching",
+  "name": "Mooncakes Catching",
+  "icons": [
+    {
+      "src": "next-academy-black-notext.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "next-academy-black-notext.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
