@@ -83,7 +83,7 @@ function restart(){
 };
 function show(i){
     if (i>2){
-        $(".container").append(`<img id="${i}" class="mooncake" src="colorcake.png">`)
+        $(".container").append(`<img id="${i}" class="mooncake" src="mooncake.png">`)
         $(`#${i}`).css({'top':randomY()})
         $(`#${i}`).animate({left:'-15%'},{
             duration:randomSpeed(),
