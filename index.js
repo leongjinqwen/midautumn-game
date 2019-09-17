@@ -13,6 +13,7 @@ $('#start').click(function(){
                 $("#rabbit").animate({top: `${result}px`},300).animate({top: position},300);
             }
         }
+        document.getElementById('bgMusic').play();
     });
     $("body").on('touchstart',function(e) {
         let position = $("#rabbit").css('top')
@@ -22,8 +23,8 @@ $('#start').click(function(){
         if (position == startY) {
             $("#rabbit").animate({top: `${result}px`},300).animate({top: position},300);
         }
+        document.getElementById('bgMusic').play();
     });
-    document.getElementById('bgMusic').play();
     start()
 });
 
