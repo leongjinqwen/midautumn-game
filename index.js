@@ -25,6 +25,7 @@ $('#start').click(function(){
         }
         document.getElementById('bgMusic').play();
     });
+    document.getElementById('bgMusic').play();
     start()
 });
 
