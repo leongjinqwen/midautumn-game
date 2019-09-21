@@ -1,6 +1,6 @@
 let startY = $("#rabbit").css('top')
 let startX = $("#rabbit").offset().left
-let formLink = false;
+// let formLink = false;
 
 $('#start').click(function(){
     $("body").keydown(function(e) {
@@ -61,22 +61,22 @@ function start() {
         if (seconds <= 0) {
             clearInterval(countdown);
             $("#board").append(`<div id="restart" class="button" onClick="restart()">Play again</div>`)
-            if ($("#score").text() >= 20 ){
-                setTimeout(function() {
-                    $('#showModal').click()
-                },700);
-            }
+//             if ($("#score").text() >= 20 ){
+//                 setTimeout(function() {
+//                     $('#showModal').click()
+//                 },700);
+//             }
         }
     }, 1000);
 };
-$('#form').click(function(){
-    $("#showModal").click();
-    formLink = true;
-});
+// $('#form').click(function(){
+//     $("#showModal").click();
+//     formLink = true;
+// });
 function restart(){
-    if (formLink == true ){
-        $("#gameModal").remove();
-    }
+//     if (formLink == true ){
+//         $("#gameModal").remove();
+//     }
     $(".container").html("")
     $("#score").text(0)
     $("#restart").remove()
